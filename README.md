@@ -160,3 +160,60 @@ The agricultural dataset, training configuration, evaluation, and generated outp
 - The training dataset is limited in size and diversity.
 - Further training with a larger, high-quality agricultural dataset may improve generation quality.
 - Generated agricultural advice should be verified against reliable agricultural sources before practical use.
+# Agricultural Advice GPT — Evaluation Report
+
+## 1. Training Summary
+
+The GPT-style model was trained on agricultural text examples using next-token prediction.
+
+- Total training steps: 500
+- Model checkpoint: `checkpoints/agri_gpt.pt`
+
+## 2. Training Loss
+
+| Step | Loss |
+|---:|---:|
+| 100 | 8.2094 |
+| 200 | 4.9275 |
+| 300 | 4.1404 |
+| 400 | 3.9113 |
+| 500 | 3.6656 |
+
+The training loss decreased throughout the training process.
+
+## 3. Validation Metrics
+
+| Metric | Value |
+|---|---:|
+| Validation Loss | 3.6974 |
+| Perplexity | 40.344 |
+| Validation Tokens | 656 |
+
+Perplexity measures how uncertain the model is when predicting the next token. A lower value generally indicates better predictive performance.
+
+## 4. Automated Testing
+
+The project's automated test suite completed successfully:
+
+- Tests passed: 20
+- Tests failed: 0
+- Test execution time: 11.20 seconds
+
+## 5. Sample Generation Evaluation
+
+The model was prompted with agricultural topics involving tomato, maize, and wheat.
+
+The generated responses were not consistently coherent. Although the model produces text, its recommendations are not yet reliable enough for practical agricultural use.
+
+## 6. Limitations
+
+- Limited training data.
+- Generated text may contain grammatical errors and incomplete information.
+- Perplexity alone does not establish the factual correctness of agricultural advice.
+- More diverse agricultural data and further model improvements are needed.
+
+## 7. Reproducibility
+
+The training and evaluation can be repeated using the setup and commands documented in the main README.
+
+The saved checkpoint is located at `checkpoints/agri_gpt.pt`.
