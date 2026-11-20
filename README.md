@@ -1,5 +1,5 @@
 # Agricultural Advice GPT
-
+[![Built with askThili](https://msrit.ask.thili.ai/api/v1/public/projects/jenhxpznmt/badge.svg)](https://msrit.ask.thili.ai/b/jenhxpznmt)
 A small command-line agricultural advice generator. It accepts a crop name or a problem description and generates a concise advice snippet using a custom-trained, decoder-only GPT language model.
 
 ## What it demonstrates
