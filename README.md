@@ -126,6 +126,35 @@ The trained model checkpoint was saved at:
 `checkpoints/agri_gpt.pt`
 
 ### Limitations and Future Improvements
+## Project Architecture
+
+This project implements a small GPT-style language model designed to generate agricultural text and advice.
+
+### Main Components
+
+1. **Agricultural Dataset:** Provides crop-related text examples used for model training.
+2. **Custom Tokenizer:** A byte-level BPE tokenizer converts text into tokens that the model can process.
+3. **GPT-style Transformer:** Learns language patterns using transformer-based architecture.
+4. **Training Pipeline:** Trains the model using next-token prediction.
+5. **Text Generation:** Generates responses based on agricultural prompts.
+6. **Evaluation:** Measures validation loss and perplexity to assess model performance.
+
+### Project Contributions
+
+The project brings together the following implementation components:
+
+- Agricultural text preparation and training examples.
+- A custom byte-level BPE tokenizer.
+- A GPT-style transformer training pipeline.
+- Next-token prediction for text generation.
+- Validation loss and perplexity evaluation.
+- Automated tests for checking project functionality.
+
+### Implementation and Attribution
+
+This project is an educational implementation of a GPT-style language model for an agriculture-focused use case. It uses established concepts from transformer architecture and tokenization. Any external starter code, references, or libraries used are acknowledged in the relevant project files.
+
+The agricultural dataset, training configuration, evaluation, and generated outputs should be considered in the context of this project's own implementation.
 
 - The current generated text contains grammatical errors and incomplete recommendations.
 - The training dataset is limited in size and diversity.
