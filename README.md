@@ -83,3 +83,51 @@ Add locally relevant, verified snippets to `data/advice.txt` using the format `C
 ## License
 
 Add the license required by your course or repository before publishing.
+## Model Training and Evaluation Results
+
+The agricultural advice GPT model was trained for 500 steps using the project's agricultural text dataset.
+
+### Training Progress
+
+| Training Step | Training Loss |
+|---:|---:|
+| 100 | 8.2094 |
+| 200 | 4.9275 |
+| 300 | 4.1404 |
+| 400 | 3.9113 |
+| 500 | 3.6656 |
+
+The training loss decreased consistently, indicating that the model learned patterns from the training data.
+
+### Validation Results
+
+| Metric | Result |
+|---|---:|
+| Validation Loss | 3.6974 |
+| Perplexity | 40.344 |
+| Validation Tokens | 656 |
+| Training Steps | 500 |
+| Automated Tests Passed | 20/20 |
+
+### Sample Model Output
+
+The model was tested with prompts related to three agricultural crops:
+
+- Tomato
+- Maize
+- Wheat
+
+The generated responses were not consistently coherent or reliable. This indicates that the current model has learned some text patterns but needs further training and improvement before it can provide useful agricultural recommendations.
+
+### Model Checkpoint
+
+The trained model checkpoint was saved at:
+
+`checkpoints/agri_gpt.pt`
+
+### Limitations and Future Improvements
+
+- The current generated text contains grammatical errors and incomplete recommendations.
+- The training dataset is limited in size and diversity.
+- Further training with a larger, high-quality agricultural dataset may improve generation quality.
+- Generated agricultural advice should be verified against reliable agricultural sources before practical use.
